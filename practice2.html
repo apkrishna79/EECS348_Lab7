@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <style>
+      #paragraph {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        width: 400px;
+      }
+    </style>
+  <body>
+    <h1>Anakha Krishna: Practice 2</h1>
+    <div id="paragraph">Wow, I love to edit this text. This text is really editable and awesome. This is really fun! Really cool...
+    </div>
+    <script type="text/javascript">
+    function changeStyle() {
+        var border_R = document.getElementById("border_R").value;
+        var border_G = document.getElementById("border_G").value;
+        var border_B = document.getElementById("border_B").value;
+        var border_width = document.getElementById("border_width").value;
+        var bg_R = document.getElementById("bg_R").value;
+        var bg_G = document.getElementById("bg_G").value;
+        var bg_B = document.getElementById("bg_B").value;
+
+        var tag = document.getElementById("paragraph");
+        tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+        tag.style.borderWidth = `${border_width}px`;
+        tag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+}
+    </script>
+    Border R(0-255): <input type="text" id="border_R" value=""> <br>
+    Border G(0-255): <input type="text" id="border_G" value=""> <br>
+    Border B(0-255): <input type="text" id="border_B" value=""> <br>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    Background R(0-255): <input type="text" id="bg_R" value=""> <br>
+    Background G(0-255): <input type="text" id="bg_G" value=""> <br>
+    Background B(0-255): <input type="text" id="bg_B" value=""> <br>
+    <button onclick="changeStyle()">Apply Changes</button> <br>
+
+
+  </body>
+</html>
